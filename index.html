@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fokus</title>
+    <meta name="description" content="Temporizador Pomodoro com tarefas do dia, histórico de sessões e gráfico da semana.">
+    <meta name="theme-color" content="#041832">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./imagens/icone-192.png">
     <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
@@ -22,7 +26,7 @@
     <main class="app">
         <header class="app__header">
             <figure class="app__logo-figure">
-                <img class="app__logo-image" src="./imagens/logo.png" alt="">
+                <img class="app__logo-image" src="./imagens/logo.png" alt="Fokus">
             </figure>
         </header>
         <section class="app__section-banner-container">
@@ -70,9 +74,31 @@
             </div>
         </section>
 
+        <section class="extra" aria-label="Tarefas e progresso">
+            <div class="extra__card">
+                <h2 class="extra__title">Tarefas de hoje</h2>
+                <p class="extra__hint">Escolha uma tarefa e o tempo de foco vai para ela.</p>
+                <form class="tarefa-form" id="form-tarefa">
+                    <label class="sr-only" for="nova-tarefa">Nova tarefa</label>
+                    <input id="nova-tarefa" class="tarefa-input" type="text" maxlength="80" placeholder="O que você vai fazer?" autocomplete="off">
+                    <button class="tarefa-add" type="submit">Adicionar</button>
+                </form>
+                <ul class="tarefas" id="lista-tarefas"></ul>
+            </div>
+            <div class="extra__card">
+                <h2 class="extra__title">Seu progresso</h2>
+                <div class="numeros" id="numeros"></div>
+                <h3 class="extra__sub">Minutos de foco nos últimos 7 dias</h3>
+                <div class="semana" id="semana" role="img" aria-label="Gráfico de minutos de foco por dia"></div>
+                <button class="instalar" id="instalar" hidden>Instalar o Fokus no celular</button>
+            </div>
+        </section>
+
+        <div class="aviso" id="aviso" role="status" hidden></div>
+
         <footer class="app__footer">
             <p class="app__footer-text">
-                Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe Firefly.Desenvolvido por Alura. 
+                Projeto fictício e sem fins comerciais. Base do curso da Alura, imagens geradas por IA no Adobe Firefly. Versão 2.0 com tarefas, histórico e instalação como app por João Marcos Rodrigues Barbosa.
             </p>
         </footer>
     </main>

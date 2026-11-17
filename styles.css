@@ -250,3 +250,47 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 6rem;
     }
 }
+
+/* ---------- Fokus 2.0 ---------- */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.extra{width:99rem;max-width:92%;margin:0 auto 6rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.4rem}
+.extra__card{border-radius:3.2rem;border:.2rem solid var(--azul-royal);background:var(--fundo-card-timer);padding:2.8rem;color:var(--color-secondary);font-family:Montserrat, sans-serif}
+.extra__title{font-size:2.4rem;font-weight:600;margin:0 0 .6rem}
+.extra__sub{font-family:Montserrat, sans-serif;font-size:1.5rem;font-weight:600;margin:2.4rem 0 1.2rem;opacity:.85}
+.extra__hint{font-size:1.5rem;opacity:.75;margin:0 0 1.6rem}
+.tarefa-form{display:flex;gap:.8rem}
+.tarefa-input{flex:1;min-width:0;font:inherit;font-size:1.6rem;color:#fff;background:rgba(1,8,14,.55);border:.15rem solid var(--azul-royal);border-radius:1.2rem;padding:1.1rem 1.4rem}
+.tarefa-input::placeholder{color:rgba(255,255,255,.5)}
+.tarefa-add{font:inherit;font-size:1.5rem;font-weight:600;color:#fff;border:0;border-radius:1.2rem;padding:0 1.6rem;background:var(--linear-botes);cursor:pointer}
+.tarefas{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.8rem}
+.tarefa{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1rem;background:rgba(1,8,14,.45);border:.15rem solid transparent;border-radius:1.2rem;padding:1rem 1.2rem;font-size:1.6rem}
+.tarefa.ativa{border-color:var(--lils)}
+.tarefa.feita .tarefa__nome{text-decoration:line-through;opacity:.55}
+.tarefa__check{width:2.2rem;height:2.2rem;accent-color:var(--lils);cursor:pointer}
+.tarefa__nome{background:none;border:0;color:#fff;font:inherit;text-align:left;cursor:pointer;padding:0;overflow-wrap:anywhere}
+.tarefa__tempo{font-size:1.3rem;opacity:.75;white-space:nowrap}
+.tarefa__x{background:none;border:0;color:rgba(255,255,255,.6);font-size:2rem;line-height:1;cursor:pointer;padding:0 .4rem}
+.tarefa__x:hover{color:#fff}
+.vazio{font-size:1.5rem;opacity:.7;margin:1.6rem 0 0}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.2rem}
+.numeros div{background:rgba(1,8,14,.45);border-radius:1.4rem;padding:1.4rem}
+.numeros b{display:block;font-family:Unbounded, sans-serif;font-size:2.8rem;font-weight:700;line-height:1.1}
+.numeros span{font-size:1.3rem;opacity:.8}
+.semana{display:grid;grid-template-columns:repeat(7,1fr);gap:.8rem;align-items:end;height:14rem}
+.dia{display:grid;grid-template-rows:auto 1fr auto;justify-items:center;gap:.4rem;height:100%}
+.dia__valor{font-size:1.2rem;opacity:.85}
+.dia__barra{width:100%;align-self:end;border-radius:.8rem .8rem .3rem .3rem;background:var(--linear-botes);min-height:.4rem}
+.dia.hoje .dia__barra{background:linear-gradient(180deg,#fff 0%,var(--lils) 100%)}
+.dia__nome{font-size:1.2rem;opacity:.8;text-transform:capitalize}
+.instalar{margin-top:2rem;width:100%;font:inherit;font-size:1.5rem;font-weight:600;color:#fff;border:.15rem solid var(--lils);background:transparent;border-radius:1.2rem;padding:1.1rem;cursor:pointer}
+.aviso{position:fixed;left:50%;bottom:3rem;transform:translateX(-50%);background:#fff;color:#041832;font-family:Montserrat, sans-serif;font-weight:600;font-size:1.6rem;padding:1.4rem 2.2rem;border-radius:1.4rem;box-shadow:0 1rem 3rem rgba(0,0,0,.4);z-index:10;max-width:90%;text-align:center}
+.app__card-button:focus-visible,.app__card-primary-button:focus-visible,.tarefa-add:focus-visible,.tarefa__nome:focus-visible,.instalar:focus-visible{outline:.3rem solid #fff;outline-offset:.3rem;border-radius:.8rem}
+@media (max-width:760px){
+  .extra{grid-template-columns:minmax(0,1fr)}
+  .extra__card{padding:2rem 1.6rem}
+  .numeros b{font-size:2.2rem}
+  .app__card-timer{font-size:8rem;margin:2rem 0}
+  .app__title{font-size:3.6rem}
+  .app__card-list{flex-wrap:wrap;gap:.6rem}
+  .app__card-button{font-size:1.6rem}
+}
